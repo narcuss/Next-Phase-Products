@@ -2,19 +2,15 @@
 <html lang="en" dir="ltr">
 
 <head>
-
   <meta charset="utf-8">
   <title>Next Phase Products</title>
-
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap" rel="stylesheet">
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="favicon.ico">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/410f4fbc58.js" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
@@ -50,7 +46,7 @@
               </ul>
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="#login-card">Account</a>
+                  <a class="nav-link" id="account" href="#login-card">Account</a>
                 </li>
               </ul>
             </div>
@@ -68,28 +64,28 @@
         </a>
       </div>
     </div>
-    
+  
     <div class="login-card" id="login-card">
       <div class="card-content">
         <h2>Login/Register</h2>
         <form class="form" id="login-form">
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="text" id="email">
+            <input type="text" id="email" placeholder="Enter your email">
           </div>
           <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" id="password">
+            <input type="password" id="password" placeholder="Enter your password">
           </div>
           <div class="form-group">
             <button class="login-button" type="submit">Login</button>
           </div>
-          <p class="register">Don't have an account? <a href="" id="register-link" style="color: #FF004A;">Register</a></p>
+          <p class="register">Don't have an account? <a href="#" id="register-link" style="color: #ff0055;">Register</a></p>
         </form>
         <form class="form hidden" id="register-form">
           <div class="form-group">
             <label for="username">Username</label>
-            <input type="text" id="username" placeholder="A-a 1-9 !-# characters requierd">
+            <input type="text" id="username" placeholder="A-a 1-9 !-# characters required">
           </div>
           <div class="form-group">
             <label for="new-email">Email</label>
@@ -102,12 +98,74 @@
           <div class="form-group">
             <button class="register-button" type="submit">Register</button>
           </div>
-          <p class="login">Already have an account? <a href="" id="login-link" style="color: #FF004A;">Login</a></p>
+          <p class="login">Already have an account? <a href="#" id="login-link" style="color: #FF004A;">Login</a></p>
         </form>
       </div>
     </div>
-        
+  
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+        const registerLink = document.getElementById('register-link');
+        const loginLink = document.getElementById('login-link');
+  
+        registerLink.addEventListener('click', function(event) {
+          event.preventDefault();
+          loginForm.classList.add('hidden');
+          registerForm.classList.remove('hidden');
+        });
+  
+        loginLink.addEventListener('click', function(event) {
+          event.preventDefault();
+          registerForm.classList.add('hidden');
+          loginForm.classList.remove('hidden');
+        });
+  
+        loginForm.addEventListener('submit', function(event) {
+          event.preventDefault();
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+          console.log('Login form submitted with email:', email, 'and password:', password);
+          // Adăugați logică personalizată pentru autentificare aici
+        });
+  
+        registerForm.addEventListener('submit', function(event) {
+          event.preventDefault();
+          const username = document.getElementById('username').value;
+          const email = document.getElementById('new-email').value;
+          const password = document.getElementById('new-password').value;
+          console.log('Register form submitted with username:', username, ', email:', email, 'and password:', password);
+          // Adăugați logică personalizată pentru înregistrare aici
+        });
+  
+        const accountLink = document.getElementById('account');
+        const loginButton = document.querySelector('.login-button');
+        const loginCard = document.getElementById('login-card');
+  
+        accountLink.addEventListener('click', function(event) {
+          event.preventDefault();
+          toggleLoginForm();
+        });
+  
+        loginButton.addEventListener('click', function(event) {
+          event.preventDefault();
+          toggleLoginForm();
+        });
+  
+        function toggleLoginForm() {
+          if (loginCard.style.display === 'none') {
+            loginCard.style.display = 'block';
+            loginForm.classList.remove('hidden');
+            registerForm.classList.add('hidden');
+          } else {
+            loginCard.style.display = 'none';
+          }
+        }
+      });
+    </script>
   </section>
+  
   
   <!-- SECTION 2 -->
   
@@ -135,7 +193,7 @@
           <h1 class="Products">Products</h1>
         </div>
         
-        <div class="products-cards col-lg-4">
+        <div class="products-cards col-lg-6">
           <div class="card card1">
             <div class="card-header">
               <img src="images/computer.png" alt="Computer" class="computer">
@@ -146,7 +204,7 @@
           </div>
         </div>
   
-        <div class="products-cards col-lg-4">
+        <div class="products-cards col-lg-6">
           <div class="card card2">
             <div class="card-header">
               <img src="images/bulb.png" alt="Bulb" class="bulb">
@@ -157,7 +215,7 @@
           </div>
         </div>
   
-        <div class="products-cards col-lg-4">
+        <div class="products-cards col-lg-12">
           <div class="card card3">
             <div class="card-header">
               <img src="images/processor.png" alt="Processor" class="processor">
@@ -176,20 +234,36 @@
   <section>
     <div class="background-image4" id="section4">
       <div class="services">
-        <div class="services-box">
           <h1 class="Services">Services</h1>
-        </div>
-        <div class="services-box">
-          <img src="images/cloud.png" alt="Cloud" class="cloud">
-          <p class="service-text">At our company, we understand that innovation extends beyond tangible products. We also offer a range of exceptional services that cater to the evolving needs of our clients.</p>
-        </div>
-        <div class="services-box">
-          <img src="images/ai.png" alt="AI" class="ai">
-          <p class="service-text">Our service offerings encompass a wide spectrum, including consultancy, research and development, prototyping, testing, and project management.</p>
-        </div>
-        <div class="services-box">
-          <img src="images/vr1.png" alt="VR" class="vr1">
-          <p class="service-text">Our goal is to provide comprehensive and reliable services that empower businesses to embrace innovation and capitalize on emerging opportunities.</p>
+        <div id="carousel" class="carousel slide" data-bs-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="services-box" alt="First slide">
+                <img src="images/cloud.png" alt="Cloud" class="cloud">
+                <p class="service-text">At our company, we understand that innovation extends beyond tangible products. We also offer a range of exceptional services that cater to the evolving needs of our clients.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="services-box" alt="Second slide">
+                <img src="images/ai.png" alt="AI" class="ai">
+                <p class="service-text">Our service offerings encompass a wide spectrum, including consultancy, research and development, prototyping, testing, and project management.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="services-box" alt="Third slide">
+                <img src="images/vr1.png" alt="VR" class="vr1">
+                <p class="service-text">Our goal is to provide comprehensive and reliable services that empower businesses to embrace innovation and capitalize on emerging opportunities.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
     </div>
