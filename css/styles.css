@@ -81,7 +81,7 @@ body  {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
     z-index: 1;
   }
 
@@ -135,7 +135,7 @@ body  {
     width: 100%;
     height: 100%;
     display: none;
-    background-color: rgba(0, 0, 0, 0.705);
+    background-color: rgba(0, 0, 0, 0.445);
     z-index: 3;
   }
   
@@ -143,7 +143,7 @@ body  {
     background-color: #000000ef;
     padding: 20px;
     border-radius: 5px;
-    max-width: 400px;
+    max-width: 350px;
     font-family: "Montserrat";
     margin: 15% auto;
   }
@@ -324,7 +324,7 @@ body  {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 0;
 }
 .welcome-box {
@@ -373,7 +373,7 @@ body  {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 0;
 }
 
@@ -423,7 +423,7 @@ body  {
   position: relative;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.699);
-  box-shadow: 0 0 10px rgb(39, 39, 39);
+  box-shadow: 0 0 5px rgb(34, 34, 34);
 }
 
 .card-body1, .card-body2, .card-body3 {
@@ -438,19 +438,19 @@ body  {
 
 .computer {
   width: 100px;
-  height: 110px;
+  height: 120px;
   padding: 0 0 20px;
 }
 
 .bulb {
   width: 100px;
-  height: 110px;
+  height: 120px;
   padding: 0 0 20px;
 }
 
 .processor {
   width: 100px;
-  height: 110px;
+  height: 120px;
   padding: 0 0 20px;
 }
 
@@ -473,7 +473,7 @@ body  {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 0;
 }
 
@@ -485,7 +485,6 @@ body  {
   position: relative;
   text-align: center;
   margin-bottom: 10%;
- 
 }
 
 .services {
@@ -495,7 +494,7 @@ body  {
 .services-box {
   font-family: "Montserrat";
   font-size: 1.5rem;
-  padding: 1% 23%;
+  padding: 0 23%;
   align-items: center;
 }
 
@@ -531,10 +530,12 @@ body  {
 
 .carousel-control-next {
   margin-right: 10%;
+  padding-top: 10%;
 }
 
 .carousel-control-prev {
   margin-left: 9%;
+  padding-top: 10%;
 }
 
 /* SECTION 5 */
@@ -556,24 +557,34 @@ body  {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 0;
 }
 
-.Carriers {
+.Type {
   color: #FF004A;
   font-family: "Ubuntu";
-  font-weight: bolder;
-  font-size: 3.5rem;
-  position: relative;
   text-align: center;
-  padding: 0 0 25%;
+  font-weight: bolder;
+  font-size: 3rem;
+  position: relative !important;
+  padding: 0 0 10%;
+  z-index: 1;
 }
 
-.carriers-box {
-  padding: 0 24%;
-  font-size: 1.9rem;
+.type-row {
+  padding: 15% 0;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  z-index: 1;
+
+}
+
+.type-box {
   font-family: "Montserrat";
+  font-size: 1.5rem;
+  padding: 5% 23%;
+  align-items: center;
 }
 
 /* SECTION 6 */
@@ -595,7 +606,78 @@ body  {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 0;
+}
+
+.Carriers {
+  color: #FF004A;
+  font-family: "Ubuntu";
+  font-weight: bolder;
+  font-size: 3.5rem;
+  position: relative;
+  text-align: center;
+  padding: 0 0 25%;
+}
+
+.carriers-box {
+  padding: 0 24%;
+  font-size: 1.9rem;
+  font-family: "Montserrat";
+}
+
+.button-apply {
+  border: 3px solid #FF004A;
+  background-color: transparent;
+  color: #FF004A;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 28px;
+  font-weight: bolder;
+  font-family: "Ubuntu";
+  margin: 6px 4px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  border-radius: 15px;
+  letter-spacing: 2px;
+}
+
+.button-apply:hover {
+  background-color: #FF004A;
+  color: black;
+  font-weight: bolder;
+  font-family: "Ubuntu";
+}
+
+.button-container2 {
+  position: relative;
+  padding: 2% 0 0 0;
+}
+
+/* SECTION 7 */
+
+.background-image7 {
+  position: relative;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.background-image7::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 0;
 }
 
@@ -617,7 +699,7 @@ body  {
 
 /* FOOTER SECTION */
 
-.background-image7 {
+.background-image8 {
   position: relative;
   padding: 0;
   min-height: 5vh;
@@ -627,14 +709,14 @@ body  {
   overflow: hidden;
 }
 
-.background-image7::before {
+.background-image8::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 0;
 }
 
