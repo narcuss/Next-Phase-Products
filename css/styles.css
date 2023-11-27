@@ -1,12 +1,4 @@
-html {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
 
-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: normal;
-}
 
 body  {
     font-family: "Montserrat";
@@ -36,13 +28,13 @@ body  {
     text-align: right;
     font-size: 16px;
     position: relative;
-    
 }
 
 .titlu {
     font-weight: bolder;
     font-family: "ubuntu";
-    font-size: 70px;
+    font-size: 75px;
+    padding-bottom: 2%;
 }
 
 .Phase {
@@ -109,7 +101,7 @@ body  {
   .nav-link {
     color: rgb(255, 255, 255) !important;
     padding: 20px 25px !important;
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   .nav-link:hover {
@@ -422,8 +414,8 @@ body  {
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.699);
-  box-shadow: 0 0 5px rgb(34, 34, 34);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(15, 15, 15, 0.5);
 }
 
 .card-body1, .card-body2, .card-body3 {
@@ -618,6 +610,7 @@ body  {
   position: relative;
   text-align: center;
   padding: 0 0 25%;
+  z-index: 1;
 }
 
 .carriers-box {
@@ -656,6 +649,40 @@ body  {
 .button-container2 {
   position: relative;
   padding: 2% 0 0 0;
+}
+
+.Jobs {
+  color: #FF004A;
+  font-family: "Ubuntu";
+  font-weight: bolder;
+  font-size: 3.5rem;
+  position: relative;
+  text-align: center;
+  padding: 0 0 7%;
+}
+
+.RD {
+  color:#ffffff;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  margin: 0 0 1% ;
+  padding: auto;
+}
+
+.job-box {
+  padding: 2%;
+  font-size: 1.5rem;
+  font-family: "Montserrat";
+  z-index: 1;
+}
+
+.job-cards {
+  padding: 2% 1% 3%;
+  font-size: 1.5rem;
+  font-family: "Montserrat";
+  color: rgba(255, 255, 255, 0);
+  display: flex;
 }
 
 /* SECTION 7 */
@@ -743,10 +770,25 @@ body  {
 }
 
 .bot-link:hover {
-  color: rgba(255, 255, 255, 0.650);
+  color: #FF004A;
 }
 
 .bottom {
   display: inline-block;
   margin: 0 35px;
+}
+
+h1 {
+  color: #FF004A;
+  font-weight: bold;
+  font-family: "Ubuntu";
+}
+
+.pp {
+  text-align: start;
+}
+
+.pp1 {
+  text-align: start;
+  margin-bottom: auto;
 }
