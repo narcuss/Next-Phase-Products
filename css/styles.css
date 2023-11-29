@@ -13,6 +13,7 @@ body  {
 #logo {
     width: 90px;
     height: 75px;
+
 }
 
 .image-button {
@@ -24,9 +25,10 @@ body  {
 }
 
 .nav-item {
+    font-family: "Ubuntu";
     font-weight: bolder;
     text-align: right;
-    font-size: 16px;
+    font-size: 17px;
     position: relative;
 }
 
@@ -81,9 +83,8 @@ body  {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    padding: 20px;
     z-index: 2;
+    width: 100%;
   }
 
   .navbar-transparent {
@@ -91,7 +92,7 @@ body  {
   }
 
   .navbar-dark {
-    background-color: rgba(0, 0, 0, 0) !important;
+    background-color: rgba(0, 0, 0, 0.400) !important;
   }
 
   .navbar-toggler {
@@ -101,7 +102,7 @@ body  {
   .nav-link {
     color: rgb(255, 255, 255) !important;
     padding: 20px 25px !important;
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .nav-link:hover {
@@ -476,58 +477,40 @@ body  {
   font-size: 3.5rem;
   position: relative;
   text-align: center;
-  margin-bottom: 10%;
-}
-
-.services {
-  z-index: 1;
+  padding: 0 0 10%;
 }
 
 .services-box {
   font-family: "Montserrat";
   font-size: 1.5rem;
-  padding: 0 23%;
+  padding: 0 20%;
   align-items: center;
-}
-
-.service-text {
-  padding: 0 10%;
-  text-align: center;
-  color: white;
   z-index: 1;
 }
 
+.service-text {
+  text-align: center;
+  color: white;
+  z-index: 1;
+  padding: 2%;
+}
 
 .cloud {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   float: left;
 }
 
 .ai {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   float: right;
 }
 
 .vr1 {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   float: left;
-}
-
-.carousel-item {
-  height: 150px;
-}
-
-.carousel-control-next {
-  margin-right: 10%;
-  padding-top: 10%;
-}
-
-.carousel-control-prev {
-  margin-left: 9%;
-  padding-top: 10%;
 }
 
 /* SECTION 5 */
