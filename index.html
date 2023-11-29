@@ -19,35 +19,6 @@
 
   <!-- SECTION 1 -->
 
-  <script src="path/to/jquery.min.js"></script>
-<script src="path/to/bootstrap.bundle.min.js"></script>
-<script>
-  // jQuery to handle the switch between icon and text based on navbar state
-  $(document).ready(function() {
-    // Check the window width on load
-    toggleIconTextOnWidthChange();
-
-    // Check the window width when the window is resized
-    $(window).resize(function() {
-      toggleIconTextOnWidthChange();
-    });
-  });
-
-  function toggleIconTextOnWidthChange() {
-    var windowWidth = $(window).width();
-    var accountLink = $('#account');
-    var accountItem = $('#accountItem');
-
-    if (windowWidth < 992) { // Adjust the breakpoint as needed
-      // Switch to text in the collapsed state
-      accountLink.html('<span class="d-inline">Account</span>');
-    } else {
-      // Switch back to the icon in the expanded state
-      accountLink.html('<i class="fas fa-user d-none d-lg-inline"></i><span class="d-inline d-lg-none">Account</span>');
-    }
-  }
-</script>
-
   <section>
     <div class="background-image" id="HOME">
       <video autoplay muted loop id="video-bg">
@@ -120,7 +91,7 @@
         <form class="form hidden" id="register-form">
           <div class="form-group">
             <label for="username">Username</label>
-            <input type="text" id="username" placeholder="A-a 1-9 !-# characters required">
+            <input type="text" id="username" placeholder="A-a 1-9 !-#">
           </div>
           <div class="form-group">
             <label for="new-email">Email</label>
@@ -128,7 +99,7 @@
           </div>
           <div class="form-group">
             <label for="new-password">Password</label>
-            <input type="password" id="new-password" placeholder="16 characters required">
+            <input type="password" id="new-password" placeholder="8 characters required">
           </div>
           <div class="form-group">
             <button class="register-button" type="submit">Register</button>
@@ -447,6 +418,55 @@
       </ul>
     </footer>
   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="path/to/jquery.min.js"></script>
+  <script src="path/to/bootstrap.bundle.min.js"></script>
+  <script>
+    // jQuery to handle the switch between icon and text based on navbar state
+    $(document).ready(function() {
+      // Check the window width on load
+      toggleIconTextOnWidthChange();
+  
+      // Check the window width when the window is resized
+      $(window).resize(function() {
+        toggleIconTextOnWidthChange();
+      });
+    });
+  
+    function toggleIconTextOnWidthChange() {
+      var windowWidth = $(window).width();
+      var accountLink = $('#account');
+      var accountItem = $('#accountItem');
+  
+      if (windowWidth < 992) { // Adjust the breakpoint as needed
+        // Switch to text in the collapsed state
+        accountLink.html('<span class="d-inline">Account</span>');
+      } else {
+        // Switch back to the icon in the expanded state
+        accountLink.html('<i class="fas fa-user d-none d-lg-inline"></i><span class="d-inline d-lg-none">Account</span>');
+      }
+    }
+  </script>
 
 
 </body>
